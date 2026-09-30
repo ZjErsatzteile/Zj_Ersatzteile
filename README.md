@@ -1,17 +1,17 @@
-# ZJ Ersatzteile – Shop-Version
+# ZJ Ersatzteile – kostenlose Website
 
-Enthalten:
-- Produktkatalog
-- Suche und Kategorien
-- Warenkorb mit Mengenänderung
-- Speicherung des Warenkorbs im Browser
-- Bestellanfrage über WhatsApp
-- dein Logo
-- responsive Design für Handy/PC
+## Dateien
+- `index.html` – Website
+- `style.css` – Design
+- `script.js` – Suche, Kategorien und WhatsApp-Anfragen
+- `assets/logo.jpeg` – dein Logo
 
-## Preise und Produkte ändern
-Öffne `script.js`. Ganz oben befindet sich das `products`-Array.
-Dort kannst du Name, Kategorie, Beschreibung und Preis ändern oder neue Produkte hinzufügen.
+## Kostenlos veröffentlichen
+Du kannst den kompletten Ordner z. B. über GitHub Pages oder Cloudflare Pages veröffentlichen.
+
+## Produkte ändern
+Die Beispielprodukte stehen oben in `script.js` im Array `products`.
+Dort kannst du Name, Kategorie, Beschreibung und Preis ändern.
 
 ## Wichtig
-Das ist ein kostenloser Frontend-Shop. Die Bestellung wird per WhatsApp angefragt; es gibt noch keine automatische Zahlung, Lagerverwaltung oder Rechnungserstellung.
+Die Website ist eine kostenlose Frontend-Version. Für echte Online-Bestellungen mit Lagerbestand, Zahlung, Rechnungen und Versand braucht es später einen Shop-/Backend-Bereich.

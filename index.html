@@ -1,78 +1,112 @@
 <!doctype html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ZJ Ersatzteile – KFZ Teile Shop</title>
-<meta name="description" content="ZJ Ersatzteile – KFZ Ersatzteile für alle Automarken von A bis Z.">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ZJ Ersatzteile – KFZ Ersatzteile für alle Automarken von A bis Z.">
+  <title>ZJ Ersatzteile | KFZ Ersatzteile von A bis Z</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <div class="nav">
-    <a class="logo" href="#start"><img src="assets/logo.jpeg" alt="ZJ Ersatzteile"><b>ZJ ERSATZTEILE</b></a>
-    <nav><a href="#start">Start</a><a href="#shop">Shop</a><a href="#kontakt">Kontakt</a></nav>
-    <button class="cartBtn" onclick="openCart()">🛒 Warenkorb <span id="cartCount">0</span></button>
-  </div>
-</header>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#start">
+        <img src="assets/logo.jpeg" alt="ZJ Ersatzteile Logo">
+        <span>ZJ Ersatzteile</span>
+      </a>
+      <nav>
+        <a href="#start">Startseite</a>
+        <a href="#teile">Ersatzteile</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+      <a class="whatsapp small" href="https://wa.me/436677995349" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </header>
 
-<section id="start" class="hero">
-  <div class="heroBg"></div>
-  <div class="heroText">
-    <span class="tag">KFZ ERSATZTEILE VON A BIS Z</span>
-    <h1>Dein Auto.<br><em>Unser Ersatzteil.</em></h1>
-    <p>Autoteile für alle Marken – günstig, zuverlässig und direkt per WhatsApp anfragbar.</p>
-    <a class="goldBtn" href="#shop">Zum Shop</a>
-    <a class="darkBtn" href="https://wa.me/436677995349?text=Hallo%20ZJ%20Ersatzteile%2C%20ich%20suche%20ein%20Ersatzteil." target="_blank">WhatsApp Anfrage</a>
-  </div>
-</section>
+  <main>
+    <section id="start" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">KFZ ERSATZTEILE VON A BIS Z</p>
+        <h1>Passende Autoteile.<br><span>Schnell & zuverlässig.</span></h1>
+        <p>Wir bieten Ersatzteile für alle gängigen Automarken. Frag uns einfach nach dem benötigten Teil.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#teile">Ersatzteile ansehen</a>
+          <a class="btn outline" href="https://wa.me/436677995349?text=Hallo%20ZJ%20Ersatzteile%2C%20ich%20suche%20ein%20KFZ-Ersatzteil." target="_blank" rel="noopener">Per WhatsApp anfragen</a>
+        </div>
+      </div>
+    </section>
 
-<section class="benefits">
-  <div><strong>🚗 Alle Marken</strong><span>Teile von A bis Z</span></div>
-  <div><strong>💶 Faire Preise</strong><span>Preis auf Anfrage möglich</span></div>
-  <div><strong>📱 WhatsApp</strong><span>Schnelle Beratung</span></div>
-  <div><strong>📦 Bestellung</strong><span>Einfach & unkompliziert</span></div>
-</section>
+    <section class="trust">
+      <div class="container trust-grid">
+        <div><strong>Alle Marken</strong><span>Teile von A bis Z</span></div>
+        <div><strong>Faire Preise</strong><span>Günstig & zuverlässig</span></div>
+        <div><strong>Direkte Anfrage</strong><span>Schnell per WhatsApp</span></div>
+      </div>
+    </section>
 
-<main id="shop">
-  <div class="shopHead">
-    <div><span class="tag dark">UNSER SORTIMENT</span><h2>Autoteile Shop</h2><p>Produkt auswählen, in den Warenkorb legen und Anfrage senden.</p></div>
-    <input id="search" type="search" placeholder="🔎 Teil, Marke oder Kategorie suchen …">
-  </div>
+    <section id="teile" class="products-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow dark">UNSER SORTIMENT</p>
+            <h2>KFZ Ersatzteile</h2>
+            <p>Wähle eine Kategorie oder suche direkt nach einem Teil.</p>
+          </div>
+          <div class="search-wrap">
+            <input id="search" type="search" placeholder="z. B. Bremsen, Filter, BMW …" aria-label="Ersatzteile durchsuchen">
+          </div>
+        </div>
 
-  <div class="filters" id="filters">
-    <button class="active" data-cat="Alle">Alle</button>
-    <button data-cat="Bremsen">Bremsen</button><button data-cat="Filter">Filter</button>
-    <button data-cat="Motor">Motor</button><button data-cat="Fahrwerk">Fahrwerk</button>
-    <button data-cat="Elektrik">Elektrik</button><button data-cat="Karosserie">Karosserie</button>
-  </div>
+        <div class="chips" id="chips">
+          <button class="chip active" data-category="Alle">Alle</button>
+          <button class="chip" data-category="Bremsen">Bremsen</button>
+          <button class="chip" data-category="Filter">Filter</button>
+          <button class="chip" data-category="Motor">Motor</button>
+          <button class="chip" data-category="Fahrwerk">Fahrwerk</button>
+          <button class="chip" data-category="Elektrik">Elektrik</button>
+          <button class="chip" data-category="Karosserie">Karosserie</button>
+        </div>
 
-  <div class="grid" id="products"></div>
-  <div id="empty" class="empty">Kein passendes Teil gefunden. <a href="https://wa.me/436677995349" target="_blank">Frag uns direkt per WhatsApp.</a></div>
-</main>
+        <div class="product-grid" id="productGrid"></div>
+        <p class="empty" id="empty">Keine passenden Artikel gefunden. Schreib uns direkt per WhatsApp – wir suchen das passende Teil für dich.</p>
+      </div>
+    </section>
 
-<section class="request">
-  <div><span class="tag">NICHT GEFUNDEN?</span><h2>Wir suchen dein passendes Teil.</h2><p>Sende uns Marke, Modell, Baujahr und möglichst die Teilenummer.</p></div>
-  <a class="goldBtn" href="https://wa.me/436677995349?text=Hallo%20ZJ%20Ersatzteile%2C%20ich%20suche%20folgendes%20Teil%3A%0AMarke%3A%0AModell%3A%0ABaujahr%3A%0ATeil%2FTeilenummer%3A" target="_blank">Anfrage senden</a>
-</section>
+    <section class="cta">
+      <div class="container cta-box">
+        <div>
+          <p class="eyebrow">DU SUCHST EIN BESTIMMTES TEIL?</p>
+          <h2>Schick uns Fahrzeug & Ersatzteil.</h2>
+          <p>Am besten Marke, Modell, Baujahr und – falls vorhanden – Teilenummer angeben.</p>
+        </div>
+        <a class="btn primary" href="https://wa.me/436677995349?text=Hallo%20ZJ%20Ersatzteile%2C%20hier%20sind%20meine%20Fahrzeugdaten%3A%0AMarke%3A%0AModell%3A%0ABaujahr%3A%0AGesuchtes%20Teil%3A" target="_blank" rel="noopener">WhatsApp öffnen</a>
+      </div>
+    </section>
 
-<section id="kontakt" class="contact">
-  <div><span class="tag dark">KONTAKT</span><h2>ZJ Ersatzteile</h2><p>KFZ Ersatzteile für alle Automarken von A bis Z.</p></div>
-  <div class="contactBox"><small>WHATSAPP</small><a href="https://wa.me/436677995349" target="_blank">0667 / 7995349</a><small>Direkt erreichbar</small></div>
-</section>
+    <section id="kontakt" class="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow dark">KONTAKT</p>
+          <h2>ZJ Ersatzteile</h2>
+          <p>Autoteile für alle Marken von A bis Z.</p>
+        </div>
+        <div class="contact-card">
+          <span>WhatsApp</span>
+          <a href="https://wa.me/436677995349" target="_blank" rel="noopener">0667 / 7995349</a>
+          <small>Direkt anfragen</small>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<footer>© <span id="year"></span> ZJ Ersatzteile · KFZ Ersatzteile von A bis Z</footer>
+  <footer>
+    <div class="container footer">
+      <span>© <span id="year"></span> ZJ Ersatzteile</span>
+      <span>KFZ Ersatzteile von A bis Z</span>
+    </div>
+  </footer>
 
-<div class="overlay" id="overlay" onclick="closeCart()"></div>
-<aside class="cart" id="cart">
-  <div class="cartHead"><h2>Warenkorb</h2><button onclick="closeCart()">✕</button></div>
-  <div id="cartItems"></div>
-  <div class="cartBottom">
-    <div><span>Artikel</span><b id="total">0,00 €</b></div>
-    <button class="order" onclick="orderWhatsApp()">Bestellung per WhatsApp</button>
-    <p>Preise können vor der Bestellung bestätigt werden.</p>
-  </div>
-</aside>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
