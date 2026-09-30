@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZJ Ersatzteile – KFZ Teile Shop</title>
+<meta name="description" content="ZJ Ersatzteile – KFZ Ersatzteile für alle Automarken von A bis Z.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a class="logo" href="#start"><img src="assets/logo.jpeg" alt="ZJ Ersatzteile"><b>ZJ ERSATZTEILE</b></a>
+    <nav><a href="#start">Start</a><a href="#shop">Shop</a><a href="#kontakt">Kontakt</a></nav>
+    <button class="cartBtn" onclick="openCart()">🛒 Warenkorb <span id="cartCount">0</span></button>
+  </div>
+</header>
+
+<section id="start" class="hero">
+  <div class="heroBg"></div>
+  <div class="heroText">
+    <span class="tag">KFZ ERSATZTEILE VON A BIS Z</span>
+    <h1>Dein Auto.<br><em>Unser Ersatzteil.</em></h1>
+    <p>Autoteile für alle Marken – günstig, zuverlässig und direkt per WhatsApp anfragbar.</p>
+    <a class="goldBtn" href="#shop">Zum Shop</a>
+    <a class="darkBtn" href="https://wa.me/436677995349?text=Hallo%20ZJ%20Ersatzteile%2C%20ich%20suche%20ein%20Ersatzteil." target="_blank">WhatsApp Anfrage</a>
+  </div>
+</section>
+
+<section class="benefits">
+  <div><strong>🚗 Alle Marken</strong><span>Teile von A bis Z</span></div>
+  <div><strong>💶 Faire Preise</strong><span>Preis auf Anfrage möglich</span></div>
+  <div><strong>📱 WhatsApp</strong><span>Schnelle Beratung</span></div>
+  <div><strong>📦 Bestellung</strong><span>Einfach & unkompliziert</span></div>
+</section>
+
+<main id="shop">
+  <div class="shopHead">
+    <div><span class="tag dark">UNSER SORTIMENT</span><h2>Autoteile Shop</h2><p>Produkt auswählen, in den Warenkorb legen und Anfrage senden.</p></div>
+    <input id="search" type="search" placeholder="🔎 Teil, Marke oder Kategorie suchen …">
+  </div>
+
+  <div class="filters" id="filters">
+    <button class="active" data-cat="Alle">Alle</button>
+    <button data-cat="Bremsen">Bremsen</button><button data-cat="Filter">Filter</button>
+    <button data-cat="Motor">Motor</button><button data-cat="Fahrwerk">Fahrwerk</button>
+    <button data-cat="Elektrik">Elektrik</button><button data-cat="Karosserie">Karosserie</button>
+  </div>
+
+  <div class="grid" id="products"></div>
+  <div id="empty" class="empty">Kein passendes Teil gefunden. <a href="https://wa.me/436677995349" target="_blank">Frag uns direkt per WhatsApp.</a></div>
+</main>
+
+<section class="request">
+  <div><span class="tag">NICHT GEFUNDEN?</span><h2>Wir suchen dein passendes Teil.</h2><p>Sende uns Marke, Modell, Baujahr und möglichst die Teilenummer.</p></div>
+  <a class="goldBtn" href="https://wa.me/436677995349?text=Hallo%20ZJ%20Ersatzteile%2C%20ich%20suche%20folgendes%20Teil%3A%0AMarke%3A%0AModell%3A%0ABaujahr%3A%0ATeil%2FTeilenummer%3A" target="_blank">Anfrage senden</a>
+</section>
+
+<section id="kontakt" class="contact">
+  <div><span class="tag dark">KONTAKT</span><h2>ZJ Ersatzteile</h2><p>KFZ Ersatzteile für alle Automarken von A bis Z.</p></div>
+  <div class="contactBox"><small>WHATSAPP</small><a href="https://wa.me/436677995349" target="_blank">0667 / 7995349</a><small>Direkt erreichbar</small></div>
+</section>
+
+<footer>© <span id="year"></span> ZJ Ersatzteile · KFZ Ersatzteile von A bis Z</footer>
+
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+<aside class="cart" id="cart">
+  <div class="cartHead"><h2>Warenkorb</h2><button onclick="closeCart()">✕</button></div>
+  <div id="cartItems"></div>
+  <div class="cartBottom">
+    <div><span>Artikel</span><b id="total">0,00 €</b></div>
+    <button class="order" onclick="orderWhatsApp()">Bestellung per WhatsApp</button>
+    <p>Preise können vor der Bestellung bestätigt werden.</p>
+  </div>
+</aside>
+<script src="script.js"></script>
+</body>
+</html>
